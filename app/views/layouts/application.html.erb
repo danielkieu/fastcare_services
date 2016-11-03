@@ -14,13 +14,12 @@
 
     <div class="primary_header">
       <div class="logo">
-        <%#= link_to image_tag("logo.png", :size => "218x30"), get_url %>
-        <h3>FastCare Service</h3>
+        <%= link_to image_tag("fastcare_logo.png", :size => "218x30"), get_url %>
       </div>
       <div class="primary_menu">
 
         <div class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.user_name || current_user.email %>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= get_user_name %>
             <b class="caret"></b></a>
           <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
             <div class="top_arrow"><%=image_tag "dd_top.png" %></div>
@@ -53,8 +52,7 @@
       <div class="nav_container">
         <div id="nav">
           <ul class="select">
-            <li><%= active_link_to t("header.links.dashboard"), get_url %></li>
-
+            <li><%= active_link_to t("header.links.dashboard"), get_url if admin? %></li>
             <li class="dropdown">
                 <%= active_link_to t("header.links.invoices.invoices"), invoices_path, :class => "dropdown-toggle disabled", "data-toggle" => "dropdown" %>
               <ul class="sub">
@@ -69,57 +67,9 @@
                   </ul>
                 </div>
             </li>
-            <li class="dropdown">
-              <%= active_link_to "Estimates", estimates_path, :class => "dropdown-toggle disabled", "data-toggle" => "dropdown" %>
-              <ul class="sub">
-                <li><%= active_link_to "Estimates", estimates_path %></li>
-                <li><%= active_link_to "New Estimate", new_estimate_path %></li>
-              </ul>
-              <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                <ul>
-                  <li><%= active_link_to "Estimate Listing", estimates_path %></li>
-                  <li><%= active_link_to "New Estimate", new_estimate_path %></li>
-                </ul>
-              </div>
-            </li>
-            <li class="dropdown">
-              <%= active_link_to t("header.links.time_tracking.time_tracking"), logs_path, :class => "dropdown-toggle disabled", "data-toggle" => "dropdown" %>
-              <ul class="sub">
-                <li><%= active_link_to t("header.links.time_tracking.time_sheet"), logs_path %></li>
-                <li><%= active_link_to t("header.links.time_tracking.project"), projects_path %></li>
-                <li><%= active_link_to t("header.links.time_tracking.task"), tasks_path %></li>
-                <li><%= active_link_to t("header.links.time_tracking.staff"), staffs_path %></li>
-                <li><%= active_link_to t("header.links.time_tracking.invoice"), invoice_logs_path %></li>
-              </ul>
-                <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                   <ul>
-                    <li><%= active_link_to t("header.links.time_tracking.time_sheet"), logs_path %></li>
-                    <li><%= active_link_to t("header.links.time_tracking.project"), projects_path %></li>
-                    <li><%= active_link_to t("header.links.time_tracking.task"), tasks_path %></li>
-                     <li><%= active_link_to t("header.links.time_tracking.staff"), staffs_path %></li>
-                     <li><%= active_link_to t("header.links.time_tracking.invoice"), invoice_logs_path %></li>
-
-                   </ul>
-                </div>
-            </li>
 
             <li class="dropdown">
-              <%= active_link_to t("header.links.expenses.expenses"), expenses_path, :class => "dropdown-toggle disabled", "data-toggle" => "dropdown"  %>
-              <ul class="sub">
-                <li><%= active_link_to t("header.links.expenses.listing"), "/#{I18n.locale}/expenses" %></li>
-                <li><%= active_link_to t("header.links.expenses.new"), "/#{I18n.locale}/expenses/new" %></li>
-              </ul>
-              <div class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-                <ul>
-                  <li><%= active_link_to t("header.links.expenses.listing"), "/#{I18n.locale}/expenses" %></li>
-                  <li><%= active_link_to t("header.links.expenses.new"), "/#{I18n.locale}/expenses/new" %></li>
-
-                </ul>
-              </div>
-            </li>
-
-            <li class="dropdown">
-              <%= active_link_to t("header.links.clients.clients"), clients_path, :class => "dropdown-toggle disabled", "data-toggle" => "dropdown"  %>
+              <%= active_link_to t("header.links.clients.clients"), clients_path, :class => "dropdown-toggle disabled", "data-toggle" => "dropdown" if admin? %>
               <ul class="sub">
                 <li><%= active_link_to t("header.links.clients.clients"), clients_path %></li>
                 <li><%= active_link_to t("header.links.clients.sent_emails"), sent_emails_path %></li>

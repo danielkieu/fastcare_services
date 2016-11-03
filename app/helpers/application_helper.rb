@@ -191,6 +191,7 @@ module ApplicationHelper
   end
 
   def get_url
+    return invoices_path unless admin? && manager?
     if current_user.settings.currency.present? and current_user.settings.currency == "On"
       main_app.dashboard_path(currency: currencies.first.try(:id))
     else
@@ -263,4 +264,19 @@ module ApplicationHelper
     can? method, klass
   end
 
+  def get_user_name
+    current_user.user_name || current_user.email
+  end
+
+  def admin?
+    current_user && current_user.roles.first.name == "admin"
+  end
+
+  def staff?
+    current_user && current_user.roles.first.name == "staff"
+  end
+
+  def manager?
+    current_user && current_user.roles.first.name == "manager"
+  end
 end

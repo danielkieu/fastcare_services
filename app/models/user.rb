@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
     self.settings.date_format = "%Y-%m-%d"
     self.settings.currency = "On"
     self.settings.records_per_page = 5
-    self.settings.default_currency = "USD"
+    self.settings.default_currency = "VND"
   end
 
   def set_default_role
@@ -49,11 +49,11 @@ class User < ActiveRecord::Base
   end
 
   def currency_symbol
-    "$"
+    "đ"
   end
 
   def currency_code
-    "USD"
+    "VND"
   end
 
   def already_exists?(email)

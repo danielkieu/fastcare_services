@@ -23,6 +23,7 @@ class ItemsController < ApplicationController
   load_and_authorize_resource :only => [:index, :show, :create, :destroy, :update, :new, :edit]
   before_filter :set_per_page_session
   helper_method :sort_column, :sort_direction
+  before_filter :valid_user_access, only: [:new, :update, :edit]
   # GET /items
   # GET /items.json
   include ItemsHelper
@@ -161,6 +162,10 @@ class ItemsController < ApplicationController
   end
 
   private
+
+  def valid_user_access
+    redirect_to '/' unless admin? || manager?
+  end
 
   def get_intimation_message(action_key, item_ids)
     helper_methods = {archive: 'items_archived', destroy: 'items_deleted'}

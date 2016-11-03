@@ -51,7 +51,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(user)
-    dashboard_path
+    admin? || manager? ? dashboard_path : invoices_path
   end
 
   def after_sign_out_path_for(user)

@@ -1,21 +1,21 @@
 /*-------------------------Custom Font Dosis-------------------------*/
-@font-face {
+/*@font-face {
   font-family: 'Dosis ExtraLight';
   font-style: normal;
   font-weight: 200;
   src: url(http://themes.googleusercontent.com/static/fonts/dosis/v1/ObbIOKT7x5q3tD-LZ0O70fesZW2xOQ-xsNqO47m55DA.eot);
   src: local('Dosis ExtraLight'), local('Dosis-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/ObbIOKT7x5q3tD-LZ0O70fesZW2xOQ-xsNqO47m55DA.eot) format('embedded-opentype'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/05xr33FHwecUTIADg28rEfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/zuuDDmIlQfJeEM3Uf6kkpvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
 }
-
-@font-face {
+*/
+/*@font-face {
   font-family: 'Dosis Light';
   font-style: normal;
   font-weight: 300;
   src: url(http://themes.googleusercontent.com/static/fonts/dosis/v1/piAeziXdjUmpEWux15l7q_esZW2xOQ-xsNqO47m55DA.eot);
   src: local('Dosis Light'), local('Dosis-Light'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/piAeziXdjUmpEWux15l7q_esZW2xOQ-xsNqO47m55DA.eot) format('embedded-opentype'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/0b3R8ORT0i9mlMGM3BxXF_esZW2xOQ-xsNqO47m55DA.ttf) format('truetype'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/GpmMKE0dnXylect5ObzLR_esZW2xOQ-xsNqO47m55DA.woff) format('woff');
 }
-
-@font-face {
+*/
+/*@font-face {
   font-family: 'Dosis Regular';
   font-style: normal;
   font-weight: 400;
@@ -61,7 +61,7 @@
   font-weight: 800;
   src: url(http://themes.googleusercontent.com/static/fonts/dosis/v1/mPoGKQuC65tedUakfBsfBfesZW2xOQ-xsNqO47m55DA.eot);
   src: local('Dosis ExtraBold'), local('Dosis-ExtraBold'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/mPoGKQuC65tedUakfBsfBfesZW2xOQ-xsNqO47m55DA.eot) format('embedded-opentype'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/T4JvHtpMHbjlr73o1YLMo_esZW2xOQ-xsNqO47m55DA.ttf) format('truetype'), url(http://themes.googleusercontent.com/static/fonts/dosis/v1/k9xA3bmr7wstksq4xsFJafesZW2xOQ-xsNqO47m55DA.woff) format('woff');
-}
+}*/
 
 /*Custom Font Dosis*/
 
@@ -127,7 +127,7 @@ ul li {
 }
 
 h1 {
-  font-family: 'Dosis Medium', sans-serif;
+  /*font-family: 'Dosis Medium', sans-serif;*/
   font-size: 24px;
   color: #00bde5; /*blue*/
   margin: 0px;
@@ -141,7 +141,7 @@ h1 span {
 }
 
 h1.green {
-  font-family: 'Dosis Medium';
+  /*font-family: 'Dosis Medium';*/
   color: #8bc126;
 }
 
@@ -151,7 +151,7 @@ ul li {
 }
 
 h2 {
-  font-family: 'Dosis Regular', sans-serif;
+  /*font-family: 'Dosis Regular', sans-serif;*/
   font-size: 20px;
   color: #464646; /*grey*/
   margin: 0px;
@@ -264,12 +264,12 @@ h4 {
   }
 }
 .nav_container {
-  min-height: 86px;
+  /*min-height: 86px;*/
   background: asset-url('nav_bg.png') no-repeat top center;
 }
 
 #nav {
-  height: 43px;
+/*  height: 43px;*/
   position: relative;
   z-index: 500;
   width: 98%;
@@ -291,7 +291,6 @@ h4 {
 }
 #nav .select a {
   display: block;
-  font-family: 'Dosis Regular' , sans-serif;
   font-style: normal;
   font-size: 18px;
   color: #ffffff;
@@ -331,7 +330,7 @@ h4 {
   display: block;
   float: left;
   background: transparent;
-  font-family: 'Dosis Regular', sans-serif;
+  /*font-family: 'Dosis Regular', sans-serif;*/
   font-style: normal;
   color: #7d7d7d;
   line-height: 34px;
@@ -941,7 +940,7 @@ input[disabled]{
 
   color: #FFFFFF;
   display: inline-block;
-  font-family: "Dosis Regular", sans-serif;
+  /*font-family: "Dosis Regular", sans-serif;*/
   font-size: 20px;
   height: 30px;
   padding: 8px 0 0 0;
@@ -1367,7 +1366,7 @@ input[type="color"]:focus, .uneditable-input:focus{
   form input{padding-bottom: 5px}
   .tbl_uri_listing{ width: 80%; float:right}
 }
-.dev_logo{clear: both; color: grey; font-family: 'Dosis Medium',sans-serif; font-size: 22px; margin-left: 79px; margin-top: -1px;}
+.dev_logo{clear: both; color: grey; font-family: 'Arial',sans-serif; font-size: 22px; margin-left: 79px; margin-top: -1px;}
 .doorkeeper_main_container{
   .doorkeeper_nav{
     background: #00BDE5; margin-top: 20px;
